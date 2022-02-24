@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<title>テーブル定義書&#32;Olivia&#32;2022/02/20版(0.0.8)</title>
+		<link rel="stylesheet" href="a5m2.css">
+	</head>
+	<body>
+	<table border="1">
+		<caption>テーブル情報</caption>
+			<colgroup>
+				<col width="115">
+				<col width="180">
+				<col width="115">
+				<col width="180">
+			</colgroup>
+			<th>システム名</th>
+			<td>Olivia&nbsp;</td>
+			<th>作成者</th>
+			<td>Yuki&#32;Takeda&nbsp;</td>
+		</tr>
+		<tr>
+			<th>サブシステム名</th>
+			<td>2022/02/20版(0.0.8)&nbsp;</td>
+			<th>作成日</th>
+			<td>2022/02/24&nbsp;</td>
+		</tr>
+		<tr>
+			<th>スキーマ名</th>
+			<td>takara_db&nbsp;</td>
+			<th>更新日</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>論理テーブル名</th>
+			<td>型番マスタ&nbsp;</td>
+			<th>RDBMS&nbsp;</th>
+			<td>5.7.37-log 5.7.37-log&nbsp;</td>
+		</tr>
+		<tr>
+			<th>物理テーブル名</th>
+			<td>m_kataban&nbsp;</td>
+			<th>&nbsp;</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="4"><b>備考</b><br></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>カラム情報</caption>
+			<colgroup>
+				<col width="30">
+				<col width="120">
+				<col width="120">
+				<col width="100">
+				<col width="60">
+				<col width="60">
+				<col width="100">
+			</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>論理名</th>
+			<th>物理名</th>
+			<th>データ型</th>
+			<th>Not Null</th>
+			<th>デフォルト</th>
+			<th>備考</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td>型番品名ID</td>
+			<td>KatabanHinMeiID</td>
+			<td>varchar(50)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>型番色ID</td>
+			<td>KatabanIroID</td>
+			<td>varchar(20)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
+			<td>型番艶ID</td>
+			<td>KatabanTsuyaID</td>
+			<td>varchar(10)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">4</td>
+			<td>型番容量ID</td>
+			<td>KatabanYoryoID</td>
+			<td>varchar(20)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">5</td>
+			<td>メーカーID</td>
+			<td>MakerID</td>
+			<td>varchar(5)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">6</td>
+			<td>出荷方法ID</td>
+			<td>SyukkaHouhouID</td>
+			<td>varchar(5)</td>
+			<td>Yes</td>
+			<td></td>
+			<td>調色／詰替／メーカー出荷／在庫／店入...等</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">7</td>
+			<td>引渡方法ID</td>
+			<td>HikiwatashiHouhouID</td>
+			<td>varchar(5)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">8</td>
+			<td>在庫場所</td>
+			<td>ZaikoBasyo</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">9</td>
+			<td>納期</td>
+			<td>Nouki</td>
+			<td>varchar(20)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">10</td>
+			<td>価格</td>
+			<td>Kakaku</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">11</td>
+			<td>出荷後設定可能フラグ</td>
+			<td>SyukkagoKanouFlg</td>
+			<td>tinyint(4)</td>
+			<td>&nbsp;</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">12</td>
+			<td>登録日時</td>
+			<td>TourokuNichiji</td>
+			<td>datetime</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">13</td>
+			<td>登録者ID</td>
+			<td>TourokuSyaID</td>
+			<td>varchar(8)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">14</td>
+			<td>更新日時</td>
+			<td>KoushinNichiji</td>
+			<td>datetime</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">15</td>
+			<td>更新者ID</td>
+			<td>KoushinSyaID</td>
+			<td>varchar(8)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>制約情報</caption>
+			<colgroup>
+				<col width="30">
+				<col width="170">
+				<col width="90">
+				<col width="300">
+			</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>制約名</th>
+			<th>種類</th>
+			<th>制約定義</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td>PRIMARY</td>
+			<td>PRIMARY&#32;KEY</td>
+			<td>KatabanHinMeiID,KatabanIroID,KatabanTsuyaID,KatabanYoryoID,MakerID</td>
+		</tr>
+	</table>
+
+
+	</body>
+</html>
