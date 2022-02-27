@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<title>テーブル定義書&#32;Olivia&#32;2022/02/28版(0.0.9)</title>
+		<link rel="stylesheet" href="a5m2.css">
+	</head>
+	<body>
+	<table border="1">
+		<caption>テーブル情報</caption>
+			<colgroup>
+				<col width="115">
+				<col width="180">
+				<col width="115">
+				<col width="180">
+			</colgroup>
+			<th>システム名</th>
+			<td>Olivia&nbsp;</td>
+			<th>作成者</th>
+			<td>Yuki&#32;Takeda&nbsp;</td>
+		</tr>
+		<tr>
+			<th>サブシステム名</th>
+			<td>2022/02/28版(0.0.9)&nbsp;</td>
+			<th>作成日</th>
+			<td>2022/02/27&nbsp;</td>
+		</tr>
+		<tr>
+			<th>スキーマ名</th>
+			<td>takara_db&nbsp;</td>
+			<th>更新日</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>論理テーブル名</th>
+			<td>出荷リスト&nbsp;</td>
+			<th>RDBMS&nbsp;</th>
+			<td>5.7.37-log 5.7.37-log&nbsp;</td>
+		</tr>
+		<tr>
+			<th>物理テーブル名</th>
+			<td>l_syukka&nbsp;</td>
+			<th>&nbsp;</th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="4"><b>備考</b><br></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>カラム情報</caption>
+			<colgroup>
+				<col width="30">
+				<col width="120">
+				<col width="120">
+				<col width="100">
+				<col width="60">
+				<col width="60">
+				<col width="100">
+			</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>論理名</th>
+			<th>物理名</th>
+			<th>データ型</th>
+			<th>Not Null</th>
+			<th>デフォルト</th>
+			<th>備考</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td>受注NO</td>
+			<td>JyuchuNo</td>
+			<td>varchar(12)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>受注明細NO</td>
+			<td>JyuchuMeisaiNo</td>
+			<td>varchar(12)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
+			<td>梱包担当者ID</td>
+			<td>KonpoTantosyaID</td>
+			<td>varchar(8)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">4</td>
+			<td>梱包日時</td>
+			<td>KonpoNichiji</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">5</td>
+			<td>確認１担当者ID</td>
+			<td>Kakunin1TantosyaID</td>
+			<td>varchar(8)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">6</td>
+			<td>確認１日時</td>
+			<td>Kakunin1Nichiji</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">7</td>
+			<td>確認２担当者ID</td>
+			<td>Kakunin2TantosyaID</td>
+			<td>varchar(8)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">8</td>
+			<td>確認２日時</td>
+			<td>Kakunin2Nichiji</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>制約情報</caption>
+			<colgroup>
+				<col width="30">
+				<col width="170">
+				<col width="90">
+				<col width="300">
+			</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>制約名</th>
+			<th>種類</th>
+			<th>制約定義</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td>PRIMARY</td>
+			<td>PRIMARY&#32;KEY</td>
+			<td>JyuchuNo,JyuchuMeisaiNo</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>PrimaryKey</td>
+			<td>UNIQUE</td>
+			<td>JyuchuNo,JyuchuMeisaiNo</td>
+		</tr>
+	</table>
+
+
+	</body>
+</html>
