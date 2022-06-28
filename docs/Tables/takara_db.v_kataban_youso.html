@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2022/03/22版</title>
+		<title>テーブル定義書&#32;Olivia&#32;20220629版</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2022/03/22版&nbsp;</td>
+			<td>20220629版&nbsp;</td>
 			<th>作成日</th>
-			<td>2022/03/19&nbsp;</td>
+			<td>2022/06/28&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>型番艶マスタ&nbsp;</td>
+			<td>型番要素VIEW&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
-			<td>5.7.37-log 5.7.37-log&nbsp;</td>
+			<td>5.7.38-log 5.7.38-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>m_kataban_tsuya&nbsp;</td>
+			<td>v_kataban_youso&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -72,17 +72,17 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td>型番艶ID</td>
-			<td>KatabanTsuyaID</td>
-			<td>varchar(10)</td>
-			<td>Yes (PK)</td>
+			<td></td>
+			<td>CategoryID</td>
+			<td>varchar(5)</td>
+			<td>Yes</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
-			<td>型番艶表示名</td>
-			<td>KatabanTsuyaHyojiMei</td>
+			<td></td>
+			<td>Kataban</td>
 			<td>varchar(50)</td>
 			<td>Yes</td>
 			<td></td>
@@ -90,46 +90,55 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">3</td>
-			<td>表示順</td>
-			<td>HyojiJyun</td>
-			<td>int(11)</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso1</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">4</td>
-			<td>登録日時</td>
-			<td>TourokuNichiji</td>
-			<td>datetime</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso2</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">5</td>
-			<td>登録者ID</td>
-			<td>TourokuSyaID</td>
-			<td>varchar(8)</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso3</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">6</td>
-			<td>更新日時</td>
-			<td>KoushinNichiji</td>
-			<td>datetime</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso4</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">7</td>
-			<td>更新者ID</td>
-			<td>KoushinSyaID</td>
-			<td>varchar(8)</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso5</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">8</td>
+			<td></td>
+			<td>KatabanYouso6</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -138,30 +147,20 @@
 <br>
 <br>
 	<table border="1">
-		<caption>制約情報</caption>
+		<caption>インデックス情報</caption>
 			<colgroup>
 				<col width="30">
 				<col width="170">
-				<col width="90">
-				<col width="300">
+				<col width="230">
+				<col width="60">
+				<col width="100">
 			</colgroup>
 		<tr>
 			<th>No.</th>
-			<th>制約名</th>
-			<th>種類</th>
-			<th>制約定義</th>
-		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>PRIMARY&#32;KEY</td>
-			<td>KatabanTsuyaID</td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">2</td>
-			<td>PrimaryKey</td>
-			<td>UNIQUE</td>
-			<td>KatabanTsuyaID</td>
+			<th>インデックス名</th>
+			<th>カラムリスト</th>
+			<th>ユニーク</th>
+			<th>備考</th>
 		</tr>
 	</table>
 

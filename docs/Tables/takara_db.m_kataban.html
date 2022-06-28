@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2022/03/22版</title>
+		<title>テーブル定義書&#32;Olivia&#32;20220629版</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2022/03/22版&nbsp;</td>
+			<td>20220629版&nbsp;</td>
 			<th>作成日</th>
-			<td>2022/03/19&nbsp;</td>
+			<td>2022/06/28&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -35,7 +35,7 @@
 			<th>論理テーブル名</th>
 			<td>型番マスタ&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
-			<td>5.7.37-log 5.7.37-log&nbsp;</td>
+			<td>5.7.38-log 5.7.38-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
@@ -72,8 +72,8 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td></td>
-			<td>KatabanHinMeiID</td>
+			<td>型番</td>
+			<td>Kataban</td>
 			<td>varchar(50)</td>
 			<td>Yes (PK)</td>
 			<td></td>
@@ -81,37 +81,37 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
-			<td></td>
-			<td>KatabanIroID</td>
-			<td>varchar(20)</td>
-			<td>Yes (PK)</td>
+			<td>旧型番</td>
+			<td>KyuKataban</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">3</td>
-			<td></td>
-			<td>KatabanTsuyaID</td>
-			<td>varchar(10)</td>
-			<td>Yes (PK)</td>
+			<td>カテゴリーID</td>
+			<td>CategoryID</td>
+			<td>varchar(5)</td>
+			<td>Yes</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">4</td>
-			<td></td>
-			<td>KatabanYoryoID</td>
-			<td>varchar(20)</td>
-			<td>Yes (PK)</td>
+			<td>納品書表示名</td>
+			<td>NouhinsyoHyoujiMei</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">5</td>
-			<td></td>
-			<td>MakerID</td>
-			<td>varchar(5)</td>
-			<td>Yes (PK)</td>
+			<td>別名</td>
+			<td>BetsuMei</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -122,22 +122,22 @@
 			<td>varchar(5)</td>
 			<td>Yes</td>
 			<td></td>
-			<td>調色／詰替／メーカー出荷／在庫／店入...等</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">7</td>
-			<td></td>
-			<td>HikiwatashiHouhouID</td>
-			<td>varchar(5)</td>
-			<td>Yes</td>
+			<td>在庫場所</td>
+			<td>ZaikoBasyo</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">8</td>
-			<td>在庫場所</td>
-			<td>ZaikoBasyo</td>
-			<td>varchar(50)</td>
+			<td>セット品フラグ</td>
+			<td>SetFlg</td>
+			<td>varchar(1)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -157,20 +157,56 @@
 			<td>Kakaku</td>
 			<td>int(11)</td>
 			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">11</td>
-			<td>出荷後設定可能フラグ</td>
-			<td>SyukkagoKanouFlg</td>
-			<td>tinyint(4)</td>
-			<td>&nbsp;</td>
 			<td>0</td>
 			<td></td>
 		</tr>
 		<tr>
+			<td style="text-align:right;">11</td>
+			<td>発注メーカーID</td>
+			<td>HacchuMakerID</td>
+			<td>varchar(5)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
 			<td style="text-align:right;">12</td>
+			<td>調色難度</td>
+			<td>ChosyokuNando</td>
+			<td>varchar(20)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">13</td>
+			<td>出荷後設定可能フラグ</td>
+			<td>SyukkagoKanouFlg</td>
+			<td>varchar(1)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">14</td>
+			<td>メモ１</td>
+			<td>Memo1</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">15</td>
+			<td>メモ２</td>
+			<td>Memo2</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">16</td>
 			<td>登録日時</td>
 			<td>TourokuNichiji</td>
 			<td>datetime</td>
@@ -179,7 +215,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">13</td>
+			<td style="text-align:right;">17</td>
 			<td>登録者ID</td>
 			<td>TourokuSyaID</td>
 			<td>varchar(8)</td>
@@ -188,7 +224,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">14</td>
+			<td style="text-align:right;">18</td>
 			<td>更新日時</td>
 			<td>KoushinNichiji</td>
 			<td>datetime</td>
@@ -197,7 +233,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">15</td>
+			<td style="text-align:right;">19</td>
 			<td>更新者ID</td>
 			<td>KoushinSyaID</td>
 			<td>varchar(8)</td>
@@ -210,24 +246,34 @@
 <br>
 <br>
 	<table border="1">
-		<caption>制約情報</caption>
+		<caption>インデックス情報</caption>
 			<colgroup>
 				<col width="30">
 				<col width="170">
-				<col width="90">
-				<col width="300">
+				<col width="230">
+				<col width="60">
+				<col width="100">
 			</colgroup>
 		<tr>
 			<th>No.</th>
-			<th>制約名</th>
-			<th>種類</th>
-			<th>制約定義</th>
+			<th>インデックス名</th>
+			<th>カラムリスト</th>
+			<th>ユニーク</th>
+			<th>備考</th>
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
 			<td>PRIMARY</td>
-			<td>PRIMARY&#32;KEY</td>
-			<td>KatabanHinMeiID,KatabanIroID,KatabanTsuyaID,KatabanYoryoID,MakerID</td>
+			<td>Kataban</td>
+			<td>Yes</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>IDX_M_KATABAN_KyuKataban</td>
+			<td>KyuKataban</td>
+			<td>制約</td>
+			<td>&nbsp;</td>
 		</tr>
 	</table>
 
