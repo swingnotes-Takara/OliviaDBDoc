@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>型番マスタ&nbsp;</td>
+			<td>型番View&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
 			<td>5.7.38-log 5.7.38-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>m_kataban&nbsp;</td>
+			<td>v_kataban&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -72,16 +72,25 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td>型番</td>
-			<td>Kataban</td>
-			<td>varchar(50)</td>
-			<td>Yes (PK)</td>
+			<td></td>
+			<td>ID</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
-			<td>旧型番</td>
+			<td></td>
+			<td>Kataban</td>
+			<td>varchar(50)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
+			<td></td>
 			<td>KyuKataban</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
@@ -89,8 +98,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">3</td>
-			<td>カテゴリーID</td>
+			<td style="text-align:right;">4</td>
+			<td></td>
 			<td>CategoryID</td>
 			<td>varchar(5)</td>
 			<td>Yes</td>
@@ -98,8 +107,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">4</td>
-			<td>納品書表示名</td>
+			<td style="text-align:right;">5</td>
+			<td></td>
 			<td>NouhinsyoHyoujiMei</td>
 			<td>varchar(255)</td>
 			<td>&nbsp;</td>
@@ -107,7 +116,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">5</td>
+			<td style="text-align:right;">6</td>
 			<td></td>
 			<td>KatabanMeisho</td>
 			<td>varchar(255)</td>
@@ -116,8 +125,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">6</td>
-			<td>出荷方法ID</td>
+			<td style="text-align:right;">7</td>
+			<td></td>
 			<td>SyukkaHouhouID</td>
 			<td>varchar(5)</td>
 			<td>Yes</td>
@@ -125,8 +134,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">7</td>
-			<td>在庫場所</td>
+			<td style="text-align:right;">8</td>
+			<td></td>
 			<td>ZaikoBasyo</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
@@ -134,8 +143,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">8</td>
-			<td>セット品フラグ</td>
+			<td style="text-align:right;">9</td>
+			<td></td>
 			<td>SetFlg</td>
 			<td>varchar(1)</td>
 			<td>&nbsp;</td>
@@ -143,8 +152,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">9</td>
-			<td>納期</td>
+			<td style="text-align:right;">10</td>
+			<td></td>
 			<td>Nouki</td>
 			<td>varchar(20)</td>
 			<td>&nbsp;</td>
@@ -152,8 +161,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">10</td>
-			<td>価格</td>
+			<td style="text-align:right;">11</td>
+			<td></td>
 			<td>Kakaku</td>
 			<td>int(11)</td>
 			<td>&nbsp;</td>
@@ -161,8 +170,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">11</td>
-			<td>発注メーカーID</td>
+			<td style="text-align:right;">12</td>
+			<td></td>
 			<td>HacchuMakerID</td>
 			<td>varchar(5)</td>
 			<td>&nbsp;</td>
@@ -170,8 +179,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">12</td>
-			<td>調色難度</td>
+			<td style="text-align:right;">13</td>
+			<td></td>
 			<td>ChosyokuNando</td>
 			<td>varchar(20)</td>
 			<td>&nbsp;</td>
@@ -179,8 +188,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">13</td>
-			<td>出荷後設定可能フラグ</td>
+			<td style="text-align:right;">14</td>
+			<td></td>
 			<td>SyukkagoKanouFlg</td>
 			<td>varchar(1)</td>
 			<td>&nbsp;</td>
@@ -188,8 +197,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">14</td>
-			<td>メモ１</td>
+			<td style="text-align:right;">15</td>
+			<td></td>
 			<td>Memo1</td>
 			<td>varchar(255)</td>
 			<td>&nbsp;</td>
@@ -197,8 +206,8 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">15</td>
-			<td>メモ２</td>
+			<td style="text-align:right;">16</td>
+			<td></td>
 			<td>Memo2</td>
 			<td>varchar(255)</td>
 			<td>&nbsp;</td>
@@ -206,38 +215,56 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">16</td>
-			<td>登録日時</td>
-			<td>TourokuNichiji</td>
-			<td>datetime</td>
-			<td>Yes</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
 			<td style="text-align:right;">17</td>
-			<td>登録者ID</td>
-			<td>TourokuSyaID</td>
-			<td>varchar(8)</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso1</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">18</td>
-			<td>更新日時</td>
-			<td>KoushinNichiji</td>
-			<td>datetime</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso2</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">19</td>
-			<td>更新者ID</td>
-			<td>KoushinSyaID</td>
-			<td>varchar(8)</td>
-			<td>Yes</td>
+			<td></td>
+			<td>KatabanYouso3</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">20</td>
+			<td></td>
+			<td>KatabanYouso4</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">21</td>
+			<td></td>
+			<td>KatabanYouso5</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">22</td>
+			<td></td>
+			<td>KatabanYouso6</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -261,20 +288,6 @@
 			<th>ユニーク</th>
 			<th>備考</th>
 		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>Kataban</td>
-			<td>Yes</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">2</td>
-			<td>IDX_M_KATABAN_KyuKataban</td>
-			<td>KyuKataban</td>
-			<td>制約</td>
-			<td>&nbsp;</td>
-		</tr>
 	</table>
 
 <br>
@@ -292,18 +305,6 @@
 			<th>制約名</th>
 			<th>種類</th>
 			<th>制約定義</th>
-		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>PRIMARY&#32;KEY</td>
-			<td>Kataban</td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">2</td>
-			<td>IDX_M_KATABAN_KyuKataban</td>
-			<td>UNIQUE</td>
-			<td>KyuKataban</td>
 		</tr>
 	</table>
 
