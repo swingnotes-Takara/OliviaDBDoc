@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2022/03/22版</title>
+		<title>テーブル定義書&#32;Olivia&#32;フル機能版20220630</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2022/03/22版&nbsp;</td>
+			<td>フル機能版20220630&nbsp;</td>
 			<th>作成日</th>
-			<td>2022/03/19&nbsp;</td>
+			<td>2022/07/01&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -35,7 +35,7 @@
 			<th>論理テーブル名</th>
 			<td>ピッキングリスト&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
-			<td>5.7.37-log 5.7.37-log&nbsp;</td>
+			<td>5.7.38-log 5.7.38-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
@@ -150,6 +150,40 @@
 			<td>Yes</td>
 			<td></td>
 			<td></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+	<table border="1">
+		<caption>インデックス情報</caption>
+			<colgroup>
+				<col width="30">
+				<col width="170">
+				<col width="230">
+				<col width="60">
+				<col width="100">
+			</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>インデックス名</th>
+			<th>カラムリスト</th>
+			<th>ユニーク</th>
+			<th>備考</th>
+		</tr>
+		<tr>
+			<td style="text-align:right;">1</td>
+			<td>PRIMARY</td>
+			<td>JyuchuNo,JyuchuMeisaiNo</td>
+			<td>Yes</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>PrimaryKey</td>
+			<td>JyuchuNo,JyuchuMeisaiNo</td>
+			<td>制約</td>
+			<td>&nbsp;</td>
 		</tr>
 	</table>
 
