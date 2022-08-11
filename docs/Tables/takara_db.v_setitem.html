@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>型番要素ワーク&nbsp;</td>
+			<td>型番セットアイテムView&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
 			<td>5.7.38-log 5.7.38-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>w_kataban_youso&nbsp;</td>
+			<td>v_setitem&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -72,26 +72,26 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td>カテゴリーID</td>
-			<td>CategoryID</td>
-			<td>varchar(5)</td>
-			<td>Yes (PK)</td>
+			<td></td>
+			<td>ID</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
-			<td>型番</td>
-			<td>Kataban</td>
+			<td></td>
+			<td>OyaKataban</td>
 			<td>varchar(50)</td>
-			<td>Yes (PK)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">3</td>
-			<td>型番要素1</td>
-			<td>KatabanYouso1</td>
+			<td></td>
+			<td>Kataban</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
@@ -99,45 +99,99 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">4</td>
-			<td>型番要素2</td>
-			<td>KatabanYouso2</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>Suryo</td>
+			<td>int(11)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">5</td>
-			<td>型番要素3</td>
-			<td>KatabanYouso3</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>KatabanMeisho</td>
+			<td>varchar(255)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">6</td>
-			<td>型番要素4</td>
-			<td>KatabanYouso4</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>NouhinsyoHyoujiMei</td>
+			<td>varchar(255)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">7</td>
-			<td>型番要素5</td>
-			<td>KatabanYouso5</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>SyukkaHouhouID</td>
+			<td>varchar(5)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">8</td>
-			<td>型番要素6</td>
-			<td>KatabanYouso6</td>
+			<td></td>
+			<td>ZaikoBasyo</td>
 			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">9</td>
+			<td></td>
+			<td>Nouki</td>
+			<td>varchar(20)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">10</td>
+			<td></td>
+			<td>Kakaku</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">11</td>
+			<td></td>
+			<td>HacchuMakerID</td>
+			<td>varchar(5)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">12</td>
+			<td></td>
+			<td>ChosyokuNando</td>
+			<td>varchar(20)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">13</td>
+			<td></td>
+			<td>Memo1</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">14</td>
+			<td></td>
+			<td>Memo2</td>
+			<td>varchar(255)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -162,13 +216,6 @@
 			<th>ユニーク</th>
 			<th>備考</th>
 		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>CategoryID,Kataban</td>
-			<td>Yes</td>
-			<td>&nbsp;</td>
-		</tr>
 	</table>
 
 <br>
@@ -186,12 +233,6 @@
 			<th>制約名</th>
 			<th>種類</th>
 			<th>制約定義</th>
-		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>PRIMARY&#32;KEY</td>
-			<td>CategoryID,Kataban</td>
 		</tr>
 	</table>
 
