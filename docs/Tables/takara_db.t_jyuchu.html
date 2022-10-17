@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2022/08/22版</title>
+		<title>テーブル定義書&#32;Olivia&#32;2022/10/18リリース版</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2022/08/22版&nbsp;</td>
+			<td>2022/10/18リリース版&nbsp;</td>
 			<th>作成日</th>
-			<td>2022/08/22&nbsp;</td>
+			<td>2022/10/18&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -35,7 +35,7 @@
 			<th>論理テーブル名</th>
 			<td>受注トラン&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
-			<td>5.7.38-log 5.7.38-log&nbsp;</td>
+			<td>5.7.39-log 5.7.39-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
@@ -351,15 +351,6 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">32</td>
-			<td>出荷予定日</td>
-			<td>SyukkaYoteiBi</td>
-			<td>varchar(10)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">33</td>
 			<td>希望到着日</td>
 			<td>KibouTouchakuBi</td>
 			<td>varchar(10)</td>
@@ -368,7 +359,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">34</td>
+			<td style="text-align:right;">33</td>
 			<td>配送希望時間</td>
 			<td>KibouTouchakuJikan</td>
 			<td>varchar(10)</td>
@@ -377,7 +368,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">35</td>
+			<td style="text-align:right;">34</td>
 			<td>対応状況ID</td>
 			<td>TaioJyokyoID</td>
 			<td>varchar(5)</td>
@@ -386,9 +377,18 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">36</td>
+			<td style="text-align:right;">35</td>
 			<td>出荷完了日</td>
 			<td>SyukkaKanryoBi</td>
+			<td>date</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">36</td>
+			<td>出荷予定日</td>
+			<td>SyukkaYoteiBi</td>
 			<td>date</td>
 			<td>&nbsp;</td>
 			<td></td>
@@ -456,30 +456,6 @@
 			<td>JyuchuNo</td>
 			<td>Yes</td>
 			<td>&nbsp;</td>
-		</tr>
-	</table>
-
-<br>
-<br>
-	<table border="1">
-		<caption>制約情報</caption>
-			<colgroup>
-				<col width="30">
-				<col width="170">
-				<col width="90">
-				<col width="300">
-			</colgroup>
-		<tr>
-			<th>No.</th>
-			<th>制約名</th>
-			<th>種類</th>
-			<th>制約定義</th>
-		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>PRIMARY&#32;KEY</td>
-			<td>JyuchuNo</td>
 		</tr>
 	</table>
 

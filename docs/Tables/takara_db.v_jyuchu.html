@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2022/08/22版</title>
+		<title>テーブル定義書&#32;Olivia&#32;2022/10/18リリース版</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2022/08/22版&nbsp;</td>
+			<td>2022/10/18リリース版&nbsp;</td>
 			<th>作成日</th>
-			<td>2022/08/22&nbsp;</td>
+			<td>2022/10/18&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -35,7 +35,7 @@
 			<th>論理テーブル名</th>
 			<td>受注VIEW&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
-			<td>5.7.38-log 5.7.38-log&nbsp;</td>
+			<td>5.7.39-log 5.7.39-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
@@ -425,7 +425,7 @@
 			<td style="text-align:right;">40</td>
 			<td></td>
 			<td>SyukkaYoteiBi</td>
-			<td>varchar(10)</td>
+			<td>date</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -479,7 +479,7 @@
 			<td style="text-align:right;">46</td>
 			<td></td>
 			<td>OyaShohinID</td>
-			<td>varchar(5)</td>
+			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -676,6 +676,15 @@
 		<tr>
 			<td style="text-align:right;">68</td>
 			<td></td>
+			<td>MeisaiSyukkaYoteiBi</td>
+			<td>date</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">69</td>
+			<td></td>
 			<td>TourokuNichiji</td>
 			<td>datetime</td>
 			<td>Yes</td>
@@ -683,7 +692,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">69</td>
+			<td style="text-align:right;">70</td>
 			<td></td>
 			<td>TourokuSyaID</td>
 			<td>varchar(8)</td>
@@ -692,7 +701,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">70</td>
+			<td style="text-align:right;">71</td>
 			<td></td>
 			<td>MeisaiTourokuNichiji</td>
 			<td>datetime</td>
@@ -701,7 +710,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">71</td>
+			<td style="text-align:right;">72</td>
 			<td></td>
 			<td>MeisaiTourokuSyaID</td>
 			<td>varchar(8)</td>
@@ -710,7 +719,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">72</td>
+			<td style="text-align:right;">73</td>
 			<td></td>
 			<td>KoushinNichiji</td>
 			<td>datetime</td>
@@ -719,7 +728,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">73</td>
+			<td style="text-align:right;">74</td>
 			<td></td>
 			<td>KoushinSyaID</td>
 			<td>varchar(8)</td>
@@ -728,7 +737,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">74</td>
+			<td style="text-align:right;">75</td>
 			<td></td>
 			<td>MeisaiKoushinNichiji</td>
 			<td>datetime</td>
@@ -737,7 +746,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">75</td>
+			<td style="text-align:right;">76</td>
 			<td></td>
 			<td>MeisaiKoushinSyaID</td>
 			<td>varchar(8)</td>
@@ -764,24 +773,6 @@
 			<th>カラムリスト</th>
 			<th>ユニーク</th>
 			<th>備考</th>
-		</tr>
-	</table>
-
-<br>
-<br>
-	<table border="1">
-		<caption>制約情報</caption>
-			<colgroup>
-				<col width="30">
-				<col width="170">
-				<col width="90">
-				<col width="300">
-			</colgroup>
-		<tr>
-			<th>No.</th>
-			<th>制約名</th>
-			<th>種類</th>
-			<th>制約定義</th>
 		</tr>
 	</table>
 
