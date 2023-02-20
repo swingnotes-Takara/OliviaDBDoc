@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>ラベル出力リストView&nbsp;</td>
+			<td>店頭引取リストView&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
 			<td>5.7.40-log 5.7.40-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>v_label_syutsuryoku&nbsp;</td>
+			<td>v_tentou_hikitori&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -100,8 +100,8 @@
 		<tr>
 			<td style="text-align:right;">4</td>
 			<td></td>
-			<td>SyukkaYoteiBi</td>
-			<td>date</td>
+			<td>JyuchuTantousyaMei</td>
+			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -109,7 +109,7 @@
 		<tr>
 			<td style="text-align:right;">5</td>
 			<td></td>
-			<td>SyukkaKanryoBi</td>
+			<td>SyukkaYoteiBi</td>
 			<td>date</td>
 			<td>&nbsp;</td>
 			<td></td>
@@ -118,8 +118,8 @@
 		<tr>
 			<td style="text-align:right;">6</td>
 			<td></td>
-			<td>JyuchuHouhouMei</td>
-			<td>varchar(30)</td>
+			<td>SyukkaKanryoBi</td>
+			<td>date</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -127,7 +127,7 @@
 		<tr>
 			<td style="text-align:right;">7</td>
 			<td></td>
-			<td>KyotenMei</td>
+			<td>JyuchuHouhouMei</td>
 			<td>varchar(30)</td>
 			<td>&nbsp;</td>
 			<td></td>
@@ -136,6 +136,24 @@
 		<tr>
 			<td style="text-align:right;">8</td>
 			<td></td>
+			<td>KyotenMei</td>
+			<td>varchar(30)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">9</td>
+			<td></td>
+			<td>KokyakuID</td>
+			<td>varchar(12)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">10</td>
+			<td></td>
 			<td>ChumonSyaMeisho</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
@@ -143,7 +161,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">9</td>
+			<td style="text-align:right;">11</td>
 			<td></td>
 			<td>ChumonSyaKaisyamei</td>
 			<td>varchar(50)</td>
@@ -152,7 +170,88 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">10</td>
+			<td style="text-align:right;">12</td>
+			<td></td>
+			<td>ChumonSyaZipCode</td>
+			<td>varchar(8)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">13</td>
+			<td></td>
+			<td>ChumonSyaJyusyo</td>
+			<td>varchar(100)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">14</td>
+			<td></td>
+			<td>ChumonSyaTelNo</td>
+			<td>varchar(15)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">15</td>
+			<td></td>
+			<td>Shoukei</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">16</td>
+			<td></td>
+			<td>Souryo</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">17</td>
+			<td></td>
+			<td>Tesuryo</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">18</td>
+			<td></td>
+			<td>SeikyuKingaku</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">19</td>
+			<td></td>
+			<td>HaisousakiChui</td>
+			<td>varchar(2)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">20</td>
+			<td></td>
+			<td>NouhinsyoBikou</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">21</td>
 			<td></td>
 			<td>Bikou</td>
 			<td>varchar(255)</td>
@@ -161,7 +260,25 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">11</td>
+			<td style="text-align:right;">22</td>
+			<td></td>
+			<td>KibouTouchakuBi</td>
+			<td>varchar(10)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">23</td>
+			<td></td>
+			<td>KibouTouchakuJikan</td>
+			<td>varchar(10)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">24</td>
 			<td></td>
 			<td>JyuchuMeisaiNo</td>
 			<td>varchar(12)</td>
@@ -170,7 +287,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">12</td>
+			<td style="text-align:right;">25</td>
 			<td></td>
 			<td>ShohinSyubetsu</td>
 			<td>varchar(50)</td>
@@ -179,7 +296,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">13</td>
+			<td style="text-align:right;">26</td>
 			<td></td>
 			<td>ShohinSyubetsuMei</td>
 			<td>varchar(50)</td>
@@ -188,7 +305,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">14</td>
+			<td style="text-align:right;">27</td>
 			<td></td>
 			<td>Tsuya</td>
 			<td>varchar(50)</td>
@@ -197,7 +314,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">15</td>
+			<td style="text-align:right;">28</td>
 			<td></td>
 			<td>TsuyaMei</td>
 			<td>varchar(50)</td>
@@ -206,7 +323,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">16</td>
+			<td style="text-align:right;">29</td>
 			<td></td>
 			<td>Youryo</td>
 			<td>varchar(50)</td>
@@ -215,7 +332,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">17</td>
+			<td style="text-align:right;">30</td>
 			<td></td>
 			<td>YouryoMei</td>
 			<td>varchar(50)</td>
@@ -224,7 +341,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">18</td>
+			<td style="text-align:right;">31</td>
 			<td></td>
 			<td>IromihonSyubetsu</td>
 			<td>varchar(50)</td>
@@ -233,7 +350,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">19</td>
+			<td style="text-align:right;">32</td>
 			<td></td>
 			<td>IromihonSyubetsuMei</td>
 			<td>varchar(50)</td>
@@ -242,7 +359,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">20</td>
+			<td style="text-align:right;">33</td>
 			<td></td>
 			<td>Iro</td>
 			<td>int(1)</td>
@@ -251,7 +368,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">21</td>
+			<td style="text-align:right;">34</td>
 			<td></td>
 			<td>IroMei</td>
 			<td>int(1)</td>
@@ -260,7 +377,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">22</td>
+			<td style="text-align:right;">35</td>
 			<td></td>
 			<td>Suryo</td>
 			<td>int(11)</td>
@@ -269,7 +386,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">23</td>
+			<td style="text-align:right;">36</td>
 			<td></td>
 			<td>Tanka</td>
 			<td>int(11)</td>
@@ -278,7 +395,16 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">24</td>
+			<td style="text-align:right;">37</td>
+			<td></td>
+			<td>ShiharaiHouhouMei</td>
+			<td>varchar(30)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">38</td>
 			<td></td>
 			<td>StatusMei</td>
 			<td>varchar(30)</td>
@@ -287,34 +413,34 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">25</td>
+			<td style="text-align:right;">39</td>
 			<td></td>
-			<td>SyutsuryokuTantosyaID</td>
+			<td>HikiwatashiTantosyaID</td>
 			<td>varchar(8)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">26</td>
+			<td style="text-align:right;">40</td>
 			<td></td>
-			<td>SyutsuryokuTantosyaMei</td>
+			<td>HikiwatashiTantosyaMei</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">27</td>
+			<td style="text-align:right;">41</td>
 			<td></td>
-			<td>SyutsuryokuNichiji</td>
+			<td>HikiwatashiNichiji</td>
 			<td>datetime</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">28</td>
+			<td style="text-align:right;">42</td>
 			<td></td>
 			<td>TourokuSyaID</td>
 			<td>varchar(8)</td>
@@ -323,7 +449,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">29</td>
+			<td style="text-align:right;">43</td>
 			<td></td>
 			<td>TourokuNichiji</td>
 			<td>datetime</td>
@@ -332,7 +458,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">30</td>
+			<td style="text-align:right;">44</td>
 			<td></td>
 			<td>KoushinSyaID</td>
 			<td>varchar(8)</td>
@@ -341,7 +467,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">31</td>
+			<td style="text-align:right;">45</td>
 			<td></td>
 			<td>KoushinNichiji</td>
 			<td>datetime</td>
