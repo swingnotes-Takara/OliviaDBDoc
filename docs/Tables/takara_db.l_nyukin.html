@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2023/04/19リリース版</title>
+		<title>テーブル定義書&#32;Olivia&#32;2023/07/26リリース版</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2023/04/19リリース版&nbsp;</td>
+			<td>2023/07/26リリース版&nbsp;</td>
 			<th>作成日</th>
-			<td>2023/04/18&nbsp;</td>
+			<td>2023/07/26&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -81,6 +81,15 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
+			<td>受注明細NO</td>
+			<td>JyuchuMeisaiNo</td>
+			<td>varchar(12)</td>
+			<td>Yes (PK)</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
 			<td>入金確認担当者ID</td>
 			<td>NyukinKakuninTantosyaID</td>
 			<td>varchar(8)</td>
@@ -89,7 +98,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">3</td>
+			<td style="text-align:right;">4</td>
 			<td>入金確認日時</td>
 			<td>NyukinKakuninNichiji</td>
 			<td>datetime</td>
@@ -98,7 +107,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">4</td>
+			<td style="text-align:right;">5</td>
 			<td>登録日時</td>
 			<td>TourokuNichiji</td>
 			<td>datetime</td>
@@ -107,7 +116,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">5</td>
+			<td style="text-align:right;">6</td>
 			<td>登録者ID</td>
 			<td>TourokuSyaID</td>
 			<td>varchar(8)</td>
@@ -116,7 +125,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">6</td>
+			<td style="text-align:right;">7</td>
 			<td>更新日時</td>
 			<td>KoushinNichiji</td>
 			<td>datetime</td>
@@ -125,7 +134,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">7</td>
+			<td style="text-align:right;">8</td>
 			<td>更新者ID</td>
 			<td>KoushinSyaID</td>
 			<td>varchar(8)</td>
@@ -151,12 +160,12 @@
 			<th>インデックス名</th>
 			<th>カラムリスト</th>
 			<th>ユニーク</th>
-			<th>備考</th>
+			<th>オプション</th>
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
 			<td>PRIMARY</td>
-			<td>JyuchuNo</td>
+			<td>JyuchuNo,JyuchuMeisaiNo</td>
 			<td>Yes</td>
 			<td>&nbsp;</td>
 		</tr>
