@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-		<title>テーブル定義書&#32;Olivia&#32;2023/04/19リリース版</title>
+		<title>テーブル定義書&#32;Olivia&#32;2023/07/26リリース版</title>
 		<link rel="stylesheet" href="a5m2.css">
 	</head>
 	<body>
@@ -21,9 +21,9 @@
 		</tr>
 		<tr>
 			<th>サブシステム名</th>
-			<td>2023/04/19リリース版&nbsp;</td>
+			<td>2023/07/26リリース版&nbsp;</td>
 			<th>作成日</th>
-			<td>2023/04/18&nbsp;</td>
+			<td>2023/07/26&nbsp;</td>
 		</tr>
 		<tr>
 			<th>スキーマ名</th>
@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>型番要素ワーク&nbsp;</td>
+			<td>ピッキングリスト受注一覧VIEW&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
 			<td>5.7.40-log 5.7.40-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>w_kataban_youso&nbsp;</td>
+			<td>v_picking_jyuchu_list&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -72,35 +72,35 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td>カテゴリーID</td>
-			<td>CategoryID</td>
-			<td>varchar(5)</td>
-			<td>Yes (PK)</td>
 			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">2</td>
-			<td>型番</td>
-			<td>Kataban</td>
-			<td>varchar(50)</td>
-			<td>Yes (PK)</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">3</td>
-			<td>型番要素1</td>
-			<td>KatabanYouso1</td>
-			<td>varchar(50)</td>
+			<td>ID</td>
+			<td>int(11)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
+			<td style="text-align:right;">2</td>
+			<td></td>
+			<td>JyuchuNo</td>
+			<td>varchar(12)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
+			<td></td>
+			<td>JyuchuNichiji</td>
+			<td>datetime</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
 			<td style="text-align:right;">4</td>
-			<td>型番要素2</td>
-			<td>KatabanYouso2</td>
+			<td></td>
+			<td>JyuchuTantousyaMei</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
@@ -108,37 +108,91 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">5</td>
-			<td>型番要素3</td>
-			<td>KatabanYouso3</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>SyukkaYoteiBi</td>
+			<td>date</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">6</td>
-			<td>型番要素4</td>
-			<td>KatabanYouso4</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>SyukkaKanryoBi</td>
+			<td>date</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">7</td>
-			<td>型番要素5</td>
-			<td>KatabanYouso5</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>JyuchuHouhouMei</td>
+			<td>varchar(30)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">8</td>
-			<td>型番要素6</td>
-			<td>KatabanYouso6</td>
+			<td></td>
+			<td>KyotenMei</td>
+			<td>varchar(30)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">9</td>
+			<td></td>
+			<td>ChumonSyaMeisho</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">10</td>
+			<td></td>
+			<td>ChumonSyaKaisyamei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">11</td>
+			<td></td>
+			<td>Bikou</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">12</td>
+			<td></td>
+			<td>NouhinsyoBikou</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">13</td>
+			<td></td>
+			<td>TaioJyokyoMei</td>
+			<td>varchar(30)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">14</td>
+			<td></td>
+			<td>Kataban</td>
+			<td>varchar(50)</td>
+			<td>Yes</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -160,14 +214,7 @@
 			<th>インデックス名</th>
 			<th>カラムリスト</th>
 			<th>ユニーク</th>
-			<th>備考</th>
-		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>CategoryID,Kataban</td>
-			<td>Yes</td>
-			<td>&nbsp;</td>
+			<th>オプション</th>
 		</tr>
 	</table>
 

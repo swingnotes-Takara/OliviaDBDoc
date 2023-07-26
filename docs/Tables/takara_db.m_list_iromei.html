@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>配送業者マスタ&nbsp;</td>
+			<td>リスト表示用色名マスタ&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
 			<td>5.7.40-log 5.7.40-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>m_haiso_gyosya&nbsp;</td>
+			<td>m_list_iromei&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -72,17 +72,17 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td>配送業者ID</td>
-			<td>HaisoGyosaID</td>
-			<td>varchar(5)</td>
+			<td>id</td>
+			<td>id</td>
+			<td>int(11)&#32;auto_increment</td>
 			<td>Yes (PK)</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
-			<td>配送業者名称</td>
-			<td>HaisoGyosaMei</td>
+			<td>色1</td>
+			<td>Iro1</td>
 			<td>varchar(50)</td>
 			<td>Yes</td>
 			<td></td>
@@ -90,33 +90,24 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">3</td>
-			<td>配送業者略称</td>
-			<td>HaisoGyosaRyaku</td>
-			<td>varchar(30)</td>
+			<td>色2</td>
+			<td>Iro2</td>
+			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">4</td>
-			<td>表示順</td>
-			<td>HyojiJyun</td>
-			<td>int(11)</td>
-			<td>Yes</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">5</td>
-			<td>代引手数料</td>
-			<td>DaibikiTesuryo</td>
-			<td>int(11)</td>
+			<td>色名</td>
+			<td>IroMei</td>
+			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">6</td>
+			<td style="text-align:right;">5</td>
 			<td>登録日時</td>
 			<td>TourokuNichiji</td>
 			<td>datetime</td>
@@ -125,7 +116,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">7</td>
+			<td style="text-align:right;">6</td>
 			<td>登録者ID</td>
 			<td>TourokuSyaID</td>
 			<td>varchar(8)</td>
@@ -134,7 +125,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">8</td>
+			<td style="text-align:right;">7</td>
 			<td>更新日時</td>
 			<td>KoushinNichiji</td>
 			<td>datetime</td>
@@ -143,7 +134,7 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">9</td>
+			<td style="text-align:right;">8</td>
 			<td>更新者ID</td>
 			<td>KoushinSyaID</td>
 			<td>varchar(8)</td>
@@ -174,8 +165,22 @@
 		<tr>
 			<td style="text-align:right;">1</td>
 			<td>PRIMARY</td>
-			<td>HaisoGyosaID</td>
+			<td>id</td>
 			<td>Yes</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">2</td>
+			<td>PrimaryKey</td>
+			<td>id</td>
+			<td>制約</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">3</td>
+			<td>M_LIST_IROMEI_UK1</td>
+			<td>Iro1,Iro2</td>
+			<td>制約</td>
 			<td>&nbsp;</td>
 		</tr>
 	</table>
