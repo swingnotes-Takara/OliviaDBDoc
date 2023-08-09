@@ -33,13 +33,13 @@
 		</tr>
 		<tr>
 			<th>論理テーブル名</th>
-			<td>受注明細トラン&nbsp;</td>
+			<td>出荷確認リストVIEW&nbsp;</td>
 			<th>RDBMS&nbsp;</th>
 			<td>5.7.42-log 5.7.42-log&nbsp;</td>
 		</tr>
 		<tr>
 			<th>物理テーブル名</th>
-			<td>t_jyuchu_meisai&nbsp;</td>
+			<td>v_syukka_kakunin&nbsp;</td>
 			<th>&nbsp;</th>
 			<td>&nbsp;</td>
 		</tr>
@@ -72,187 +72,43 @@
 		</tr>
 		<tr>
 			<td style="text-align:right;">1</td>
-			<td>受注NO</td>
-			<td>JyuchuNo</td>
-			<td>varchar(12)</td>
-			<td>Yes (PK)</td>
+			<td></td>
+			<td>ID</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">2</td>
-			<td>受注明細NO</td>
-			<td>JyuchuMeisaiNo</td>
-			<td>varchar(12)</td>
-			<td>Yes (PK)</td>
 			<td></td>
-			<td>前0埋め</td>
+			<td>JyuchuNo</td>
+			<td>varchar(12)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">3</td>
-			<td>型番</td>
-			<td>Kataban</td>
-			<td>varchar(50)</td>
+			<td></td>
+			<td>JyuchuNichiji</td>
+			<td>datetime</td>
 			<td>Yes</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td style="text-align:right;">4</td>
-			<td>型番名称</td>
-			<td>KatabanMeisho</td>
-			<td>varchar(255)</td>
-			<td>&nbsp;</td>
 			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">5</td>
-			<td>メーカーID</td>
-			<td>MakerID</td>
-			<td>varchar(5)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">6</td>
-			<td>親商品ID</td>
-			<td>OyaShohinID</td>
+			<td>JyuchuTantousyaMei</td>
 			<td>varchar(50)</td>
 			<td>&nbsp;</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">7</td>
-			<td>数量</td>
-			<td>Suryo</td>
-			<td>int(11)</td>
-			<td>Yes</td>
+			<td style="text-align:right;">5</td>
 			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">8</td>
-			<td>単価</td>
-			<td>Tanka</td>
-			<td>int(11)</td>
-			<td>Yes</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">9</td>
-			<td>金額</td>
-			<td>Kingaku</td>
-			<td>int(11)</td>
-			<td>Yes</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">10</td>
-			<td>支払方法ID</td>
-			<td>ShiharaiHouhouID</td>
-			<td>varchar(5)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">11</td>
-			<td>入金日</td>
-			<td>NyukinBi</td>
-			<td>varchar(20)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">12</td>
-			<td>出荷方法ID</td>
-			<td>SyukkaHouhouID</td>
-			<td>varchar(5)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">13</td>
-			<td>引渡方法ID</td>
-			<td>HikiwatashiHouhouID</td>
-			<td>varchar(5)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">14</td>
-			<td>顧客注文番号</td>
-			<td>KokyakuChumonBango</td>
-			<td>varchar(20)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">15</td>
-			<td>引渡済みフラグ</td>
-			<td>HikiwatashiFlg</td>
-			<td>varchar(1)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">16</td>
-			<td>備考</td>
-			<td>Bikou</td>
-			<td>varchar(255)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">17</td>
-			<td>メモ1</td>
-			<td>Memo1</td>
-			<td>varchar(100)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">18</td>
-			<td>メモ2</td>
-			<td>Memo2</td>
-			<td>varchar(100)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">19</td>
-			<td>送り状番号</td>
-			<td>OkurijyoBango</td>
-			<td>varchar(20)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">20</td>
-			<td>ステータスID</td>
-			<td>StatusID</td>
-			<td>varchar(5)</td>
-			<td>&nbsp;</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td style="text-align:right;">21</td>
-			<td>出荷予定日</td>
 			<td>SyukkaYoteiBi</td>
 			<td>date</td>
 			<td>&nbsp;</td>
@@ -260,17 +116,233 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">22</td>
-			<td>登録日時</td>
-			<td>TourokuNichiji</td>
-			<td>datetime</td>
+			<td style="text-align:right;">6</td>
+			<td></td>
+			<td>SyukkaKanryoBi</td>
+			<td>date</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">7</td>
+			<td></td>
+			<td>KokyakuID</td>
+			<td>varchar(12)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">8</td>
+			<td></td>
+			<td>ChumonSyaMeisho</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">9</td>
+			<td></td>
+			<td>ChumonSyaKaisyamei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">10</td>
+			<td></td>
+			<td>Bikou</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">11</td>
+			<td></td>
+			<td>NouhinsyoBikou</td>
+			<td>varchar(255)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">12</td>
+			<td></td>
+			<td>KoguchiSu</td>
+			<td>int(11)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">13</td>
+			<td></td>
+			<td>JyuchuMeisaiNo</td>
+			<td>varchar(12)</td>
 			<td>Yes</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
+			<td style="text-align:right;">14</td>
+			<td></td>
+			<td>ShohinSyubetsu</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">15</td>
+			<td></td>
+			<td>ShohinSyubetsuMei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">16</td>
+			<td></td>
+			<td>Tsuya</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">17</td>
+			<td></td>
+			<td>TsuyaMei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">18</td>
+			<td></td>
+			<td>Youryo</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">19</td>
+			<td></td>
+			<td>YouryoMei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">20</td>
+			<td></td>
+			<td>IromihonSyubetsu</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">21</td>
+			<td></td>
+			<td>IromihonSyubetsuMei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">22</td>
+			<td></td>
+			<td>Iro1</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
 			<td style="text-align:right;">23</td>
-			<td>登録者ID</td>
+			<td></td>
+			<td>Iro2</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">24</td>
+			<td></td>
+			<td>Suryo</td>
+			<td>int(11)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">25</td>
+			<td></td>
+			<td>Tanka</td>
+			<td>int(11)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">26</td>
+			<td></td>
+			<td>StatusMei</td>
+			<td>varchar(30)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">27</td>
+			<td></td>
+			<td>SyukkaHouhouMei</td>
+			<td>varchar(30)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">28</td>
+			<td></td>
+			<td>KakuninTantosyaID</td>
+			<td>varchar(8)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">29</td>
+			<td></td>
+			<td>KakuninTantosyaMei</td>
+			<td>varchar(50)</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">30</td>
+			<td></td>
+			<td>KakuninNichiji</td>
+			<td>datetime</td>
+			<td>&nbsp;</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">31</td>
+			<td></td>
 			<td>TourokuSyaID</td>
 			<td>varchar(8)</td>
 			<td>Yes</td>
@@ -278,19 +350,28 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">24</td>
-			<td>更新日時</td>
-			<td>KoushinNichiji</td>
+			<td style="text-align:right;">32</td>
+			<td></td>
+			<td>TourokuNichiji</td>
 			<td>datetime</td>
 			<td>Yes</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td style="text-align:right;">25</td>
-			<td>更新者ID</td>
+			<td style="text-align:right;">33</td>
+			<td></td>
 			<td>KoushinSyaID</td>
 			<td>varchar(8)</td>
+			<td>Yes</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;">34</td>
+			<td></td>
+			<td>KoushinNichiji</td>
+			<td>datetime</td>
 			<td>Yes</td>
 			<td></td>
 			<td></td>
@@ -314,13 +395,6 @@
 			<th>カラムリスト</th>
 			<th>ユニーク</th>
 			<th>オプション</th>
-		</tr>
-		<tr>
-			<td style="text-align:right;">1</td>
-			<td>PRIMARY</td>
-			<td>JyuchuNo,JyuchuMeisaiNo</td>
-			<td>Yes</td>
-			<td>&nbsp;</td>
 		</tr>
 	</table>
 
